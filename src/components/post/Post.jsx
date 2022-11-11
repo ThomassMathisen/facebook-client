@@ -1,7 +1,9 @@
 import "./post.css"
 import { MoreVert } from "@material-ui/icons";  
+import { Users } from "../../dummyData";
 
-const Post = () => {
+export default function Post({post}) {
+
   return (
     <div children="post">
       <div className="postWrapper">
@@ -9,129 +11,34 @@ const Post = () => {
           <div className="postTopLeft">
             <img 
               className="postProfileImg"
-              src="assets/person/5.jpeg"
+              src={Users.filter((u) => u.id === post?.userId)[0].profilePicture}
               alt=""
             />
             <span className="postUsername">
-                Jack Doe
+                {Users.filter((u) => u.id === post?.userId)[0].username}
             </span>
-            <span className="postDate">10 minutes ago</span>
+            <span className="postDate">{post?.date}</span>
           </div>
           <div className="postTopRight">
             <MoreVert />
-          </div>
+          </div> 
         </div>
         <div className="postCenter">
-          <span className="postText">This is a post</span>
-          <img className="postImg" alt="" src="/assets/post/1.jpeg" />
+          <span className="postText">{post.desc}</span>
+          <img className="postImg" alt="" src={post.photo} />
         </div>
         <div className="postBottom">
           <div className="bottomLeft">
             <img className="likeIcon" alt="" src="assets/like.png" />
             <img className="likeIcon" alt="" src="assets/heart.png" />
-            <span className="postLikeCounter">10 Likes</span>
+            <span className="postLikeCounter">{post.like} Likes</span>
           </div>
           <div className="bottomRight">
-            <span className="postCommentText">5 Comments</span>
-            <span className="postShareText">5 Shares</span>
-          </div>
-        </div>
-        <div className="postTop">
-          <div className="postTopLeft">
-            <img 
-              className="postProfileImg"
-              src="assets/person/5.jpeg"
-              alt=""
-            />
-            <span className="postUsername">
-                Jack Doe
-            </span>
-            <span className="postDate">10 minutes ago</span>
-          </div>
-          <div className="postTopRight">
-            <MoreVert />
-          </div>
-        </div>
-        <div className="postCenter">
-          <span className="postText">This is a post</span>
-          <img className="postImg" alt="" src="/assets/post/1.jpeg" />
-        </div>
-        <div className="postBottom">
-          <div className="bottomLeft">
-            <img className="likeIcon" alt="" src="assets/like.png" />
-            <img className="likeIcon" alt="" src="assets/heart.png" />
-            <span className="postLikeCounter">10 Likes</span>
-          </div>
-          <div className="bottomRight">
-            <span className="postCommentText">5 Comments</span>
-            <span className="postShareText">5 Shares</span>
-          </div>
-        </div>
-        <div className="postTop">
-          <div className="postTopLeft">
-            <img 
-              className="postProfileImg"
-              src="assets/person/5.jpeg"
-              alt=""
-            />
-            <span className="postUsername">
-                Jack Doe
-            </span>
-            <span className="postDate">10 minutes ago</span>
-          </div>
-          <div className="postTopRight">
-            <MoreVert />
-          </div>
-        </div>
-        <div className="postCenter">
-          <span className="postText">This is a post</span>
-          <img className="postImg" alt="" src="/assets/post/1.jpeg" />
-        </div>
-        <div className="postBottom">
-          <div className="bottomLeft">
-            <img className="likeIcon" alt="" src="assets/like.png" />
-            <img className="likeIcon" alt="" src="assets/heart.png" />
-            <span className="postLikeCounter">10 Likes</span>
-          </div>
-          <div className="bottomRight">
-            <span className="postCommentText">5 Comments</span>
-            <span className="postShareText">5 Shares</span>
-          </div>
-        </div>
-        <div className="postTop">
-          <div className="postTopLeft">
-            <img 
-              className="postProfileImg"
-              src="assets/person/5.jpeg"
-              alt=""
-            />
-            <span className="postUsername">
-                Jack Doe
-            </span>
-            <span className="postDate">10 minutes ago</span>
-          </div>
-          <div className="postTopRight">
-            <MoreVert />
-          </div>
-        </div>
-        <div className="postCenter">
-          <span className="postText">This is a post</span>
-          <img className="postImg" alt="" src="/assets/post/1.jpeg" />
-        </div>
-        <div className="postBottom">
-          <div className="bottomLeft">
-            <img className="likeIcon" alt="" src="assets/like.png" />
-            <img className="likeIcon" alt="" src="assets/heart.png" />
-            <span className="postLikeCounter">10 Likes</span>
-          </div>
-          <div className="bottomRight">
-            <span className="postCommentText">5 Comments</span>
-            <span className="postShareText">5 Shares</span>
+            <span className="postCommentText">{post.comment} Comments</span>
+            <span className="postShareText">{post.shares} Shares</span>
           </div>
         </div>
       </div>
     </div>
   )
 }
-
-export default Post

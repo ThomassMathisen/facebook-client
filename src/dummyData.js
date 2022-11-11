@@ -60,6 +60,7 @@ export const Users = [
       userId: 1,
       like: 32,
       comment: 9,
+      shares: 10,
     },
     {
       id: 2,
@@ -68,6 +69,7 @@ export const Users = [
       userId: 2,
       like: 2,
       comment: 1,
+      shares: 8,
     },
     {
       id: 3,
@@ -77,6 +79,7 @@ export const Users = [
       userId: 3,
       like: 61,
       comment: 2,
+      shares: 1,
     },
     {
       id: 4,
@@ -85,6 +88,7 @@ export const Users = [
       userId: 4,
       like: 7,
       comment: 3,
+      shares: 5,
     },
     {
       id: 5,
@@ -93,6 +97,7 @@ export const Users = [
       userId: 5,
       like: 23,
       comment: 5,
+      shares: 0,
     },
     {
       id: 6,
@@ -101,6 +106,7 @@ export const Users = [
       userId: 6,
       like: 44,
       comment: 6,
+      shares: 50,
     },
     {
       id: 7,
@@ -110,6 +116,7 @@ export const Users = [
       userId: 7,
       like: 52,
       comment: 3,
+      shares: 5,
     },
     {
       id: 8,
@@ -118,6 +125,7 @@ export const Users = [
       userId: 8,
       like: 15,
       comment: 1,
+      shares: 21,
     },
     {
       id: 9,
@@ -127,6 +135,7 @@ export const Users = [
       userId: 9,
       like: 11,
       comment: 2,
+      shares: 1,
     },
     {
       id: 10,
@@ -135,5 +144,6 @@ export const Users = [
       userId: 10,
       like: 104,
       comment: 12,
+      shares: 115,
     },
   ];
