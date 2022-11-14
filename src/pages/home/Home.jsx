@@ -4,17 +4,15 @@ import Sidebar from "../../components/sidebar/Sidebar"
 import Topbar from "../../components/topbar/Topbar"
 import "./home.css"
 
-const Home = () => {
+export default function Home() {
   return (
     <>
       <Topbar />
       <div className="homeContainer">
         <Sidebar />
-        <Feed />
-        <Rightbar />
+        <Feed/>
+        <Rightbar/>
       </div>
     </>
-  )
+  );
 }
-
-export default Home

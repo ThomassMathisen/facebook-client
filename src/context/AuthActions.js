@@ -1,4 +1,4 @@
-export const LoginStart = (usercredentials) => ({
+export const LoginStart = (userCredentials) => ({
   type: "LOGIN_START",
 })
 
