@@ -36,7 +36,10 @@ export default function Topbar() {
           </div>
           <div className="topbarIconItem">
             <Chat />
-            <span className="topbarIconBadge">2</span>
+            <Link to="/messenger">
+              <span className="topbarIconBadge">2</span>
+
+            </Link>
           </div>
           <div className="topbarIconItem">
             <Notifications />
