@@ -1,7 +1,7 @@
 import "./register.css"
 import axios from "axios"
 import { useRef } from "react"
-import { useNavigate, Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 export default function Register() {
   const username = useRef()
@@ -31,51 +31,50 @@ export default function Register() {
 
   return (
     <div className="register">
-      <div className="registerwrapper">
+      <div className="registerWrapper">
         <div className="registerLeft">
           <h3 className="registerLogo">facebook</h3>
           <span className="registerDesc">
-            Connect with friends and the world around you on Facebook
+            Connect with friends and the world around you on Facebook.
           </span>
         </div>
         <div className="registerRight">
-          <form  className="registerBox" onSubmit={handleClick}>
-            <input 
+          <form className="registerBox" onSubmit={handleClick}>
+            <input
               placeholder="Username"
               required
-              ref={username} 
-              className="registerInput" 
+              ref={username}
+              className="registerInput"
             />
-            <input 
+            <input
               placeholder="Email"
               required
-              ref={email} 
-              className="registerInput" 
+              ref={email}
+              className="registerInput"
+              type="email"
             />
-            <input 
+            <input
               placeholder="Password"
               required
-              ref={password} 
+              ref={password}
               className="registerInput"
               type="password"
               minLength="6"
             />
-            <input 
-              placeholder="Confirm Password"
+            <input
+              placeholder="Password Again"
               required
-              ref={passwordAgain} 
+              ref={passwordAgain}
               className="registerInput"
-              type="password" 
+              type="password"
             />
-            <button className="registerButton" type="submit">Sign up</button>
-            <Link to="/login">
-              <button className="loginRegisterButton">
-                Log in
-              </button>
-            </Link>
+            <button className="registerButton" type="submit">
+              Sign Up
+            </button>
+            <button className="loginRegisterButton" onClick={() => navigate("/login")}>Log In</button>
           </form>
         </div>
       </div>
     </div>
-  )
+  );
 }
